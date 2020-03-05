@@ -35,15 +35,14 @@ function generatePassword() {
   var characterPallate = "";
   var generatedPassword = "";
 
+  // let's begin prompting for the options
   do {
     do {
       passwordLength = 0;
       passwordInput = parseInt(prompt("Choose a password length between 8 and 128 characters."));
-      console.log(passwordInput);
-      console.log(passwordInput != passwordInput);
-    } while ((passwordInput != passwordInput))
+    } while ((passwordInput != passwordInput)) // check for non numeric input
 
-  } while ((passwordInput < 8) || (passwordInput > 128))
+  } while ((passwordInput < 8) || (passwordInput > 128)) // check that it's within the bounds
   passwordLength = passwordInput;
 
   do {
@@ -63,16 +62,17 @@ function generatePassword() {
     if (specialChosen) {
       characterPallate += SPECIAL;
     }
-    isValidated = (lowercaseChosen || uppercaseChosen || numericChosen || specialChosen)
+    isValidated = (lowercaseChosen || uppercaseChosen || numericChosen || specialChosen) // make sure at least one char option was chosen
 
     if (!isValidated) {
       alert("You must choose at least one character type.");
     }
   }
-  while (!isValidated)
+  while (!isValidated) // if valid options weren't chosen, start over
 
   for (var i = 0; i < passwordLength; i++) {
     generatedPassword += characterPallate[Math.floor(Math.random() * characterPallate.length)]
   }
+  // return that impossible-to-crack password ;)
   return generatedPassword;
 }
