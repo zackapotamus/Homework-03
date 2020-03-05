@@ -15,10 +15,10 @@ generateBtn.addEventListener("click", writePassword);
 
 function generatePassword() {
   // Constants
-  var SPECIAL = "!@#$%^&*()~=_";
-  var LOWERCASE = "abcdefghijklmnopqrstuvwxyz";
-  var UPPERCASE = LOWERCASE.toUpperCase();
-  var NUMERIC = "0123456789";
+  const SPECIAL = "!@#$%^&*()~=_";
+  const LOWERCASE = "abcdefghijklmnopqrstuvwxyz";
+  const UPPERCASE = LOWERCASE.toUpperCase();
+  const NUMERIC = "0123456789";
 
 
   // Settings
