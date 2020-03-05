@@ -8,4 +8,4 @@ High quality random passwords are harder for brute force methods to crack, so ha
 
 The options for the generated password are gathered through the use of `confirmation`s and `prompt`s. The underlying logic will ensure valid answers are given such that a valid password can be made. It then displays the password on the page.
 
-This was a fun coding problem :)
+This was a fun coding challenge :)
